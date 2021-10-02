@@ -33,8 +33,8 @@ export default class VigenereCipheringMachine {
       while (key.length < str.length){
         key = key.repeat(2);
       }
-      str = str.toUppreCase().split('');
-      key = key.toUppreCase().split('');
+      str = str.toUpperCase().split('');
+      key = key.toUpperCase().split('');
       for (let i = 0, j = 0, z=0; i < str.length; i++){
         if (this.alphabet.indexOf(str[i])>=0){
           z = (this.alphabet.indexOf(str[i])+this.alphabet.indexOf(key[j])) % 26;
@@ -52,11 +52,11 @@ export default class VigenereCipheringMachine {
     while (key.length < str.length){
         key = key.repeat(2);
       }
-      str = str.toUppreCase().split('');
-      key = key.toUppreCase().split('');
+      str = str.toUpperCase().split('');
+      key = key.toUpperCase().split('');
       for (let i = 0, j = 0, z=0; i < str.length; i++){
         if (this.alphabet.indexOf(str[i])>=0){
-          z = (this.alphabet.indexOf(str[i])-this.alphabet.indexOf(key[j]+26)) % 26;
+          z = (this.alphabet.indexOf(str[i])-this.alphabet.indexOf(key[j]) + 26) % 26;
           str[i] = this.alphabet[z];
           j++;
         }
