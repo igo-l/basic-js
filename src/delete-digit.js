@@ -25,3 +25,7 @@ function deleteDigit( n ) {
   });
   return parseInt(result[0],10);
  }
+
+ module.exports = {
+  deleteDigit
+};
